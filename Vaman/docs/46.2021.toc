@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}Problem}{1}{}%
+\contentsline {section}{\numberline {2}Introduction}{1}{}%
+\contentsline {section}{\numberline {3}Components}{2}{}%
+\contentsline {subsection}{\numberline {3.1}Arduino}{2}{}%
+\contentsline {subsection}{\numberline {3.2}Seven Segment Display}{2}{}%
+\contentsline {section}{\numberline {4}Implementation}{2}{}%
+\contentsline {subsection}{\numberline {4.1}Truth table}{2}{}%
+\contentsline {subsection}{\numberline {4.2}K-map}{2}{}%
+\contentsline {subsection}{\numberline {4.3}Boolean Equation}{3}{}%
+\contentsline {section}{\numberline {5}Hardware}{3}{}%
+\contentsline {section}{\numberline {6}Software}{4}{}%
