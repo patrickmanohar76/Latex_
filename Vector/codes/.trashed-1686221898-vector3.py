@@ -9,10 +9,10 @@ from numpy import sin, cos, pi, linspace
 
 
 # Define the coordinates of the vertices
-A = [2.3, 8]
-B = [1.6, 5.6]
-C = [3.9, 2]
-D = [5.1, 7.8]
+A = [0, 0]
+B = [9, 0]
+C = [4.33, -2.5]
+D = [-4.33, 2.5]
 
 # Define the two lines to be drawn
 line1 = [[3.63, 8.07], [3.63, 7.77]]  
@@ -33,11 +33,11 @@ ax.plot([C[0], D[0]], [C[1], D[1]],  label='DC')
 plt.plot([line1[0][0], line1[1][0]], [line1[0][1], line1[1][1]], 'r-')
 plt.plot([line2[0][0], line2[1][0]], [line2[0][1], line2[1][1]], 'r-')
 
-center = [2.3,8]
+center = [0,0]
 radius = 0.5
 
-start_angle = -100
-end_angle = -5
+start_angle = 0
+end_angle = 120
 
 angles = np.linspace(start_angle, end_angle, 100)
 x_coords = center[0] + radius * np.cos(np.radians(angles))
@@ -46,11 +46,11 @@ y_coords = center[1] + radius * np.sin(np.radians(angles))
 #fig, ax = plt.subplots()
 ax.plot(x_coords, y_coords, 'k-', linewidth=2)
 
-center = [1.6,5.6]
-radius = 0.4
+center = [9,0]
+radius = 0.5
 
-start_angle = -55
-end_angle = 70
+start_angle = 180
+end_angle = 240
 
 angles = np.linspace(start_angle, end_angle, 100)
 x_coords = center[0] + radius * np.cos(np.radians(angles))
@@ -66,8 +66,8 @@ ax.text(C[0], C[1], 'C', ha='center', va='center', fontweight='bold')
 ax.text(D[0], D[1], 'D', ha='center', va='center', fontweight='bold')
 
 # Set the plot limits and title
-ax.set_xlim([0, 10])
-ax.set_ylim([0, 10])
+ax.set_xlim([-10, 10])
+ax.set_ylim([-10, 10])
 ax.set_title('Quadrilateral ABCD')
 
 # Xdd legend
