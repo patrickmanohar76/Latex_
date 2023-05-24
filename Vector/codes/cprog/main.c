@@ -9,7 +9,7 @@ int main()
     double a = 6;
     double theta = M_PI * 1 / 4;
 
-    double **A, **B, **D, **C, **e1, **array;
+    double **A, **B, **D, **C, **e1;
     double **m_1, **m_2, **n_1, **n_2;
     double m1, m2, n1, n2;
     double dot_product_m, dot_product_n;
