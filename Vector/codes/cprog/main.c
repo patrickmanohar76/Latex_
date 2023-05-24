@@ -18,7 +18,8 @@ int main()
     A = loadtxt("a.dat",2, 1);
     e1 = loadtxt("e1.dat",2, 1);
     
-    B = scalar_mul(e1, 2, 1, c);
+    	B = createMat(2,1);
+	B = scalar_mul(e1, 2, 1, c);
     
     double cosine = cos(M_PI/2 - theta);
     double sine = sin(theta);
