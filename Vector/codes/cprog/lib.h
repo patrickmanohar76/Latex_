@@ -221,9 +221,9 @@ double **mult_int(int scalar,double **a,int m, int n)
   return a;
 }
 
-void save(double **a, int rows, int cols) {
+void save_B(double **a, int rows, int cols) {
   FILE *fp;
-  fp = fopen("result.dat", "w");
+  fp = fopen("B.dat", "w");
   //fprintf(fp, "The result of the multiplication is:\n");
   int i, j;
   for (i = 0; i < rows; i++) {
@@ -238,6 +238,40 @@ void save(double **a, int rows, int cols) {
   }
   fclose(fp);
 }
+
+void save_C(double **a, int rows, int cols) {
+	FILE *fp;
+	fp = fopen("C.dat", "w");
+	//fprintf(fp, "The result of the multiplication is:\n");
+	int i, j;
+	for (i = 0; i < rows; i++) {
+    //fprintf(fp, "[");
+    for (j = 0; j < cols; j++) {
+	    fprintf(fp, "%lf", a[i][j]);
+	    if (j < cols - 1) {
+        //fprintf(fp, ", ");
+       }
+     }                                                    fprintf(fp, "\n");
+   }
+   fclose(fp);
+ }
+
+void save_D(double **a, int rows, int cols) {
+	 FILE *fp;
+   fp = fopen("D.dat", "w");
+   //fprintf(fp, "The result of the multiplication is :\n");
+   int i, j;
+   for (i = 0; i < rows; i++) {
+     //fprintf(fp, "[");
+     for (j = 0; j < cols; j++) {
+       fprintf(fp, "%lf", a[i][j]);
+       if (j < cols - 1) {
+         //fprintf(fp, ", ");
+       }
+     }                                                    fprintf(fp, "\n");
+   }
+   fclose(fp);
+ }
 
 double **np_array(double a,double b)
 {
@@ -255,7 +289,7 @@ double radians(double deg)
   return rad;
 }
 
-double **scalar_mul(double **A,int row,int col,double num)
+double **scalar_mul(double **A,char *str,int row,int col,double num)
 {
 int i,j;
  for(i=0; i<row; i++)
